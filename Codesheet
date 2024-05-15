@@ -3,6 +3,7 @@
  Sintaxe Básica: program | action | destination
  
  Repositorio Remoto:
+ git init
  git clone git@github.com:USERNAME/REPOSITORY.git
  git push
  git push origin mais

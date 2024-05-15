@@ -28,8 +28,12 @@ Configuração inicial do GIT:
 	Verificar se a conexao SSH funciona:
 	ssh -T git@github.com 	
 	
+	Configurar para usar o git commit sem o flag -m:
+	git config --global core.editor "code --wait"
+	
 Básico do Git:
 
+	git init: Cria um repositório vazio no git local
 	git clone endereço_no_git: Clona o repositório no git para o seu computador local (pode ser o link https, ssh)
 	git remote -v: Testa a conexao entre o repositorio clonado e o original no git
 	touch name_file: Cria um novo arquivo local 
