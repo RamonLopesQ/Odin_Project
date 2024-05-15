@@ -1,0 +1,18 @@
+ ---- git -----
+ 
+ Sintaxe Básica: program | action | destination
+ 
+ Repositorio Remoto:
+ git clone git@github.com:USERNAME/REPOSITORY.git
+ git push
+ git push origin mais
+ 
+ Workflow:
+ git add name_file
+ git add .
+ git commit -m "Message describing"
+ 
+ Verificação:
+ git status
+ git log
+ 
