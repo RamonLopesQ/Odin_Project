@@ -1,3 +1,28 @@
+ ---- Ubuntu/Linux ----
+ 
+ sudo
+ sudo apt update
+ sudo apt upgrade
+ sudo apt-get install name
+ sudo dpkg -i nome_do_arquivo.deb
+ sudo dpkg -r nome_do_arquivo.deb
+ mkdir nome_do_diretório
+ mkdir -p a/b/c
+ cd ~/Nome_do_diretório
+ cd Pasta_no_diretório
+ cd ..	
+ cd
+ pwd
+ ls nome_do_diretorio
+ ls -l
+ ls -a
+ ls -lt
+ ln source_file target_file *(hardlink)
+ ln -s source_file target_file *(symlink)
+ cp source_file target_file
+ rm source_file
+ code
+ 
  ---- git -----
  
  Sintaxe Básica: program | action | destination
