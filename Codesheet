@@ -1,6 +1,6 @@
  ---- Ubuntu/Linux ----
  
- sudo
+ sudo (super_user)
  sudo apt update
  sudo apt upgrade
  sudo apt-get install name
@@ -22,6 +22,9 @@
  cp source_file target_file
  rm source_file
  code
+ cat > arquivo.txt (Cria o arquivo txt em branco, e é possível editar no proprio terminal o texto)
+ touch arquivo_em_branco
+ find arquivo_no_diretorio
  
  ---- git -----
  
