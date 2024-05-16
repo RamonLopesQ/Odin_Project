@@ -80,4 +80,6 @@ Abrir a pasta e arquivos atuais no VSC:
 
 code .
 
+Abrir o documento html no browser (já dentro do diretório):
 
+google-chrome index.html

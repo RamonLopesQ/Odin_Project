@@ -1,0 +1,55 @@
+HTML / CSS - Markup languages (linguagens de marcação)
+
+---- HTML ----
+
+* Conjunto emaranhado de elementos determinados por tags de abertura e fechamento.
+* Elementos void são elementos que não possuem tag de fechamento, ou seja, eles não podem enrolar conteudo juntos como outras tags fazem
+* Se digitar apenas ! e pressionar enter, o proprio VSCode irá gerar a estrutura básica do documento (só funciona com arquivos .html)
+* Elementos aninhados criam uma relação de pai e filho, onde os elementos dentro são os filhos, e o que abriga eles é o pai. O nível de aninhamento é determinado pelo número de camadas ao qual o elemento se encontra. Elementos no mesmo nível são chamados de irmãos. Geralmente o nível de recuo dentro do código é utilizado de maneira visual para determinar em qual nível de aninhamento o elemento se encontra. Esse nível de relacionamento é importante para determinar características que serão transmitidas de um elemento para o outro (hereditariedade), entre outras coisas
+
+-- Estrutura --
+
+	<!DOCTYPE html> - Diz ao navegador qual versão do html deve ser usada para renderizar ao documento (no caso, html5)
+
+	<html></html> - Elemento raiz do documento, o que quer dizer que todos os elementos que virão a seguir no documento serão descendentes desse elemento html
+
+	<html lang="en"></html> - Determina a linguagem do texto usada. Aprimora a acessibilidade, permitindo tecnologias assistivas, como leitores de tela, a adaptar de acordo com a linguagem usada, e usar a pronuncia correta
+
+	<head></head> - Onde são colocadas as informações meta da webpage, e coisas utilizadas para renderizar corretamente a página (não deve ser utilizado nenhum elemento que exibe conteúdo dentro do head)
+
+	<meta> - Determina a codificação utilizada pela webpage. É necessário para garantir que a página irá exibir símbolos e caracteres especiais de diferentes linguagem no browser
+
+	<meta charset = "utf-8"> - Charset padrão
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> - Adapta a página ao tamanho da tela de diferentes aparelhos, relacionado com o design responsivo das páginas
+
+	<title></title> - Usado para dar a página web um título que pode ser lido por humanos e que será exibido na aba do browser
+
+	<body></body> - Onde todo o conteúdo que será exibido ficará
+
+-- Elementos Baseados em Texto --
+
+	<p></p> - Parágrafo
+
+	<h1></h1> ao <h6></h6> - Header
+
+	<strong></strong> - Negrito
+
+	<em></em> - Itálico
+
+	<!-- Comments --> - Comentário em HTML (VSCode shortcut = ctrl + /)
+
+-- Listas Ordenadas e Desordenadas --
+
+	<ul></ul> - Lista Desordenada
+
+	<ol></ol> - Lista Ordenada
+
+	<li></li> - Elemento da lista
+
+-- Links e Imagens --
+
+
+
+
+
