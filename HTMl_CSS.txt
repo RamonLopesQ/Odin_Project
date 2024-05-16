@@ -49,7 +49,36 @@ HTML / CSS - Markup languages (linguagens de marcação)
 
 -- Links e Imagens --
 
+* A adição do comportamento rel no elemento anchor serve como medida de segurança. O noopener ajuda a evitar ataques phishing (o link aberto pode mudar a página original para outra, com o objetivo de enganar o usuário). Isso é referido como tabnabbing. O noreferrer ajuda a evitar que o link aberto saiba em qual página estava linkado
+* Se esquecer de adicionar rel="noopener noreferrer", os browsers mais atuais providenciam a segurança deles, caso o target="_blank" esteja presente
+* Links absolutos são links que levam para páginas de outros sites na internet. Geralmente ele é dividido em: protocolo://domain/path
+* Links relativos são links para outras páginas diferentes do mesmo site, assumindo que o nome de domínio é o mesmo da página que criou o link
+* Adicionar ./ antes do link, diz ao código que deve começar a procurar pelo arquivo na arquivo/diretório relativo ao diretório atual
 
+- Links -
 
+<a></a> - Anchor element (cria link)
+
+<a href=""></a> - Atributo HTML que define o destino levado ao clicar no link (hypertext reference)
+
+<a target=""></a> - Atributo HTML que define o conteúdo linkado será aberto
+	target="_blank" - Valor referente a abrir em uma nova aba
+	target="_self" - Valor referente a abrir na aba atual (valor padrão)
+	
+<a rel=""></a> - Atributo HTML usado para descrever a relação entre a página atual e o documento linkado
+	rel="noopener" - Valor que previne o link aberto de ganhar acesso a página anterior a qual ele foi aberto
+	rel="noreferrer" - Valor que previne que o link aberto saiba de qual página ou recurso tenha uma referência a ele (já inclui o comportamento do valor "noopener" dentro dele)
+	
+- Imagens -	
+
+<img> - Insere uma imagem no arquivo
+
+<img src=""> - Atributo HTML que indica qual o endereço ao qual a imagem se encontra
+
+<img alt=""> - Atributo HTML que descreve a imagem. Caso a imagem não seja carregada, ele irá mostrar o texto com a descrição da mesma
+
+<img width=""> - Atributo HTML que determina a largura da imagem (em pixels, ou px)
+
+<img height=""> - Atributo HTML que determina a algura da imagem (em pixels, ou px)
 
 
