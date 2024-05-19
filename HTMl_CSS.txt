@@ -91,7 +91,7 @@ HTML / CSS - Markup languages (linguagens de marcação)
 * A diferença entre class e ID é que os elementos só podem ter uma id, enquanto podem apresentar varias classes
 * Classes que apresentam os mesmo styles, podem ser separadas por virgula, para economizar espaço no código (.a,.b{style:value}
 * Quando separados por pontos, é chamado de chaining selector, onde apenas o elemento que tiver aquelas duas ou mais classes sofrerá a alteração de estilo (.a.b{} ou .a#b{})
-* Elementos separados por pontos seguem a regra da ancestralidade, onde o primeiro é o pai, e os outros dentro dele são os herdeiros. Quando separados por pontos, apenas os elementos filhos que tiverem o primeiro ancestral comum irão herdar as características atribuídas. (.ancestral .herdeiros)
+* Elementos separados por espaço seguem a regra da ancestralidade, onde o primeiro é o pai, e os outros dentro dele são os herdeiros. Quando separados por pontos, apenas os elementos filhos que tiverem o primeiro ancestral comum irão herdar as características atribuídas. (.ancestral .herdeiros{})
 
 -- CSS Externo,Interno e Inline --
 
