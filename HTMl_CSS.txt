@@ -119,4 +119,28 @@ width: px
 
 -- CSS Cascade --
 
+* Especificidade = Determina qual regra realmente vai ser aplicada ao HTML. Uma declaraçao CSS que é mais específica, irá apresentar precedência sobre as menos específicas (ID selector > Class selector > Type selector > Specific selector)
+* Herança = Algumas propriedades CSS que, quando aplicadas a um elementos, serão herdadas pelos seus descendentes. Propriedades baseadas em tipografia (color, font-size, font-family, etc) geralmente são herdadas, enquanto a maioria das propriedades não.
 
+-- Box Models --
+
+padding: px; - Aumenta o espaço entre a borda do box e o conteúdo do box
+border: px; - Adiciona espaço entre a margem e o padding
+margin: px; - Aumenta o espaço entre a borda do box e as bordas do box adjacente
+*** box-sizing: border-box; - Em caso de adição de padding, o próprio CSS adequará o tamanho da caixa para o width e height definidos, diferente do content-box, que irá adicionar o tamanho do padding ao tamanho total da caixa
+
+-- Block e Inline --
+
+* Div é um elemento de nível bloco. É geralmente usado como container para outros elementos serem agrupados
+* Span é um elemento de nível inline. É geralmente usado como agrupamento de conteúdo de texto para serem estilizados
+
+display: block; - Elementos que apresentam esse tipo de display, irão se comportar de maneira empilhada, cada elemento começando em uma nova linha
+display: inline; - Elementos inline não começam uma nova linha. Eles aparece ao lado de quaisquer elementos q eles foram colocados ao lado. Ex: links, <a> tags
+display: inline-block; - Elementos que se comportam como inline elements, mas com padding e margin de blocos
+
+-- Flexbox -- 
+
+* É uma maneira utilizada para organizar itens em colunas e linhas. Esses itens irão flexionar (aumentar ou diminuir) baseado em algumas regras que podem ser definidas.
+* Um flex container é um elemento q tem display: flex nele. Um flex item é um elemento que vive dentro de um flex container
+
+display: flex;
