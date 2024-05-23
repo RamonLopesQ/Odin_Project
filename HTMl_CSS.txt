@@ -142,5 +142,20 @@ display: inline-block; - Elementos que se comportam como inline elements, mas co
 
 * É uma maneira utilizada para organizar itens em colunas e linhas. Esses itens irão flexionar (aumentar ou diminuir) baseado em algumas regras que podem ser definidas.
 * Um flex container é um elemento q tem display: flex nele. Um flex item é um elemento que vive dentro de um flex container
+* flex: 1 é igual a flex-grow: 1, flex-shrink: 1 e flex-basis: 0
+* O valor padrão do flex-basis é auto. No caso ele irá adequar o tamanho base de acordo com o tamanho da declaração width
+* Quando utilizado o flex-direction para column, o flex basis irá se referir ao height ao invés do width, visto que o número de elementos dispostos na mesma linha ja será pré-definido
 
 display: flex;
+flex: 1; - Shorthand para flex-grow, flex-shrink, flex-basis
+flex-grow: 1; - Fator de crescimento. Flex: 1 diz que todas as divs dentro do container irão crescer da mesma forma. Flex: 2 2x
+flex-shrink: 1; - Fator de encolhimento. Quanto maior o value, menor ele será proporcionalmente ao tamanho dos outros elementos
+flex-basis: 1; - Determina o valor inicial do flex item, onde qualquer valor de flex-grow ou shrink irá usar ele de base
+flex-direction: ; - Determina a organização dos elementos no flexbox (row em linhas/horizontal, colums em colunas/vertical)
+justify-content: center; - Alinha os items de acordo com o main axis (space-between, center, space-around)
+align-items: center; - Alinha os items de acordo com o cross axis
+gap: px; - Cria um espaço específico entre os flex items
+
+
+
+
