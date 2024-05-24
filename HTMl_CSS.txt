@@ -80,6 +80,10 @@ HTML / CSS - Markup languages (linguagens de marcação)
 		<img width=""> - Atributo HTML que determina a largura da imagem (em pixels, ou px)
 
 		<img height=""> - Atributo HTML que determina a algura da imagem (em pixels, ou px)
+		
+-- Input --
+
+<input type=""> - Adiciona um input (text
 
 ---- CSS ----
 
@@ -100,6 +104,8 @@ Interno: <head>  <style> CSS code </style> </head>
 Inline: <selector style="color:white; background-color:black">...</selector> 
 
 -- Atributos --
+
+* height: 100vh e width: 100vw faz o conteúdo ocupar o tamanho todo da página (vh é view height e vw é view width)
 
 color: #000000
 color: rgb(0,0,0)
