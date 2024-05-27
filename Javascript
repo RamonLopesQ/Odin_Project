@@ -1,5 +1,144 @@
----- Javascript ----
+------ Javascript ------
 
--- Variáveis e Operadores --
+* Adicionar dentro do código: <body> <script> JS code </script> </body>
+* Adicionar de arquivo externo: <body><script src="javascript.js"></script></body>
+* console.log() - Exibe o valor da operação JS na tela de console
+
+* Linguagem Dinamicamente Tipada: Existem tipos de dados, mas as variáveis não são presas a eles, ou seja, uma variável pode armazenar uma string, logo em seguida, ser substituída ou armazenar um number, etc.
+
+---- Variáveis e Operadores ----
+
+-- Variáveis: --
+	var, let, const - Variáveis
+	(let nameVar = value) == (let nameVar; nameVar = value)
+	
+-- Operadores: --
+	
+	Operandos: São a quem os operadores são aplicados. (5 * 2) = 5 e 2 são operandos e * o operador
+	Operador: Simbolo que representa a operação matemática a ser realizada nos operandos
+		Unary: Quando tiver apenas um operando, o operador é unário. (X = -Y) = O operador - mostra que X será o inverso de Y
+		* Unário + Antes de não números, converte os valores para números
+		Binary: Quando tiver dois operando, é binário. (x+y)
+	
+	Operadores Matemáticos:
+	+ Adição
+	- Subtração
+	* Multiplicação
+	/ Divisão
+	% Resto (10 % 3 == 1)
+	** Expenenciação (2 ** 3 == 8)
+	= Igual 
+	== Igual Valor
+	=== Igual Valor e Tipo
+	> Maior
+	>= Maior ou igual
+	< Menor
+	<= Menor ou igual
+	!= Diferente
+	
+	Concatenar Strings (+): Juntar. Os números so são considerados strings depois de serem somados a uma string, sendo considerados como números antes e realizando suas operações normais.
+	String + String = String ("Hello" + "World" = "HelloWorld")
+	String + Number = String ("2"+ 1 = "21"
+	Number + String = String (2 + "1" = "21"
+	Number + Number + String = **String (2 + 2 + "1" == "41")
+	String + Number + Number = String ("2" + 2 + 1 == "221")
+	** Operadores - * e / convertem "strings números" em números para realizar as operações, caso necessário ("6" - 3 = 3)
+
+	Incremento e Decréscimo (Apenas em variáveis):
+	 ++ Incremento (counter = 1; ++counter; result = 2)
+	 -- Decremento (counter = 2; --counter; result = 1)
+	 Quando usados como prefixo (++counter), o valor vai ser incrementado (ou decrescido) e imediatamente sera usados o resultado do operador. Quando usado pós (counter++), o valor vai ser incrementado (ou decrescido), mas ainda irá usar seu valor anterior. 
+Ex: let counter = 0; alert (++count); //Valor retornado é 1
+let counter = 0; alert (count++); //Valor retornado é 0
+let counter = 0; count++; ++count; alert(count); //Valor retornado é 2
+
+	Bitwise:
+	& AND
+	| OR
+	^ XOR
+	~ NOT
+	<< LEFT SHIFT
+	>> RIGHT SHIFT
+	>>> ZERO-FILL RIGHT SHIFT
+	
+	Lógicos:
+	&& AND
+	|| OR
+	! NOT (inverte)
+	? Operador ternário
+	?? Nullish Coalescing (a ?? b = se a tiver valor definido, entao a, se não tiver, então b)
+	
+Precedência de operadores:
+(Unario +) > (Unário -) > (**) > (* /) > (+ -) > (=)
+	 
+
+---- Datatypes e Conditionals ----
+
+--- Data: ---
+
+	-- String - 'Hello', "Hello", `Hello`
+		* ' e ", apresentam praticamente a mesma função. ` no entanto, funciona como "função extendida", onde permite embutir variáveis e 	expressões em uma string, amarrando em ${...}
+
+	-- Numbers - 5, 6.35, Infinity,-Infinity,NaN estão inclusos
+		* Numbers podem armazenar valores de até 1.7976931348623157 * 10³⁰⁸, mas fora do "safe" range (2⁵³-1) haverá um erro de precisão
+		
+	-- BigInt - Valores acima de 2⁵³-1 (9007199254740991) só são mostrados de forma precisa usando bigint
+
+	-- Booleans - true & false;
+
+	-- Null - null (valor especial que representa vazio)
+
+	-- Undefined - undefined (valor não foi definido)
+
+	-- Symbol - symbol (usado para criar identificadores únicos para objetos)
+
+	-- Object - Todos os valores que não forem primitivos (só contém um valor especifico, como strings, numbers) ficam inclusos em objetos, como as arrays
+
+	-- ** TypeOf - typeof(x) (Operador que retorna o tipo do operando)
+
+-- Methods: --
+
+* Blocos de código que realizam ações e funções específicas nos elementos.
+
+Strings:
+
+string.length - Tamanho da string
+string.charAt() - Retorna o caractere na posição (0 - length-1)
+string.charCodeAt() - Retorna o código do caractere (UTF-16)
+string.at() - charAt mais novo (permite o uso de indexes negativos)
+string.slice(start,end) - Extrai um pedaço da string e retorna ele (parâmetros negativos fazem a contagem ser do final para o inicio)
+string.substring(start,end) - Semelhante ao slice, mas os parâmetros negativos são igual a 0
+string.substr(start, length) - Semelhante ao slice, mas o 2º argumento determina o tamanho do corte
+string.toUpperCase() - Deixa a string capitalizada
+string.toLowerCase() - Deixa a string normal
+string.concat(string2,string3) - Une duas ou mais strings
+string.trim() - Remove o white space de ambos os lados da string
+string.trimStart() - Remove o white space do começo
+string.trimEnd() - Remove o white space do fim
+string.padStart(length, value) - Preenche o length do começo da string com o value determinado
+string.padEnd(length, value) - Preenche o length do fim da string com o value determinado
+string.repeat(quantity) - Repeta uma string por um número determinado de vezes
+string.replace(original,new) - Troca o texto original pelo novo texto
+	* As flags /i (insensitive) e /g (global) permitem trocar a palavra independente da capitalização, e todas no texto de uma vez
+string.replaceAll(original, new) - Troca todas as palavras originais do texto pelas novas
+string.split("separator") - Converte a string em uma array, dividindo as letras pelo separator (se for omitido "", a array retornada sera composta apenas de single characters) 
+
+-- Condicionais --
+
+If - Se a condição for true, executar o bloco X
+Else - Se a condição for false, executar o bloco Y
+If/else - Se ... Senão ...
+Else if - Se a condição 1 for verdadeira, executar o bloco X. Além disso, se a condição 1 for falsa e a condição 2 for verdadeira, executar o bloco Y. Se ambas forem falsas, executar o bloco Z
+
+Operador Ternário:
+	If - else = (operation) ? condition true, do this : condition false, do this
+	If-else-if = (operation) ? do this : (operation) ? do this : do this
+
+switch(expression){
+case choice1 : code; break;
+case choice2: code; break;
+default: code;
+}
+* A expressão será avaliada. Se a opção 1 for selecionada, o código 1 será executado, e o programa retorna pra fora do switch. Senão, ele continua executando. Se a opção 2 for selecionada, o código 2 será executado, e o programa retorna pra fora do switch. Senão ele continua executando. Se nenhuma opção bater, ele irá executar o código da opção default, e então sairá do switch para retornar ao código original
 
 
