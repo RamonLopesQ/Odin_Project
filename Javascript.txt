@@ -1,7 +1,7 @@
 ------ Javascript ------
 
 * Adicionar dentro do código: <body> <script> JS code </script> </body>
-* Adicionar de arquivo externo: <body><script src="javascript.js"></script></body>
+* Adicionar de arquivo externo: <body><script src="algo.js"></script></body>
 * console.log() - Exibe o valor da operação JS na tela de console
 
 * Linguagem Dinamicamente Tipada: Existem tipos de dados, mas as variáveis não são presas a eles, ou seja, uma variável pode armazenar uma string, logo em seguida, ser substituída ou armazenar um number, etc.
@@ -140,5 +140,15 @@ case choice2: code; break;
 default: code;
 }
 * A expressão será avaliada. Se a opção 1 for selecionada, o código 1 será executado, e o programa retorna pra fora do switch. Senão, ele continua executando. Se a opção 2 for selecionada, o código 2 será executado, e o programa retorna pra fora do switch. Senão ele continua executando. Se nenhuma opção bater, ele irá executar o código da opção default, e então sairá do switch para retornar ao código original
+
+-- Function --
+
+* Conjunto de instruções que realizam uma tarefa. Podem ser reutilizados diversas vezes dentro do código, quando são chamados.
+
+* Parâmetro - São como placeholders para valores futuros.
+* Argumentos - São os valores dados aos placeholders.
+
+function name(param1,param2){ code }
+name(arg1,arg2) // Chamada da função
 
 

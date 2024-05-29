@@ -1,0 +1,13 @@
+Chrome Dev Tools Documentation - https://developer.chrome.com/docs/devtools?hl=pt-br
+
+Acessar e alterar CSS - https://developer.chrome.com/docs/devtools/css?hl=pt-br
+
+CSS Features Reference - https://developer.chrome.com/docs/devtools/css/reference?hl=pt-br
+
+Introdução a alteração DOM - https://developer.chrome.com/docs/devtools/dom?hl=pt-br
+
+Simular Device Mode - https://developer.chrome.com/docs/devtools/device-mode?hl=pt-br
+
+Depurar o JS - https://developer.chrome.com/docs/devtools/javascript?hl=pt-br
+
+Pausar o código com breakpoints - https://developer.chrome.com/docs/devtools/javascript/breakpoints?hl=pt-br

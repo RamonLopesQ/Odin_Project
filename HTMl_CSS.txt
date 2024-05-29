@@ -7,6 +7,14 @@ HTML / CSS - Markup languages (linguagens de marcação)
 * Se digitar apenas ! e pressionar enter, o proprio VSCode irá gerar a estrutura básica do documento (só funciona com arquivos .html)
 * Elementos aninhados criam uma relação de pai e filho, onde os elementos dentro são os filhos, e o que abriga eles é o pai. O nível de aninhamento é determinado pelo número de camadas ao qual o elemento se encontra. Elementos no mesmo nível são chamados de irmãos. Geralmente o nível de recuo dentro do código é utilizado de maneira visual para determinar em qual nível de aninhamento o elemento se encontra. Esse nível de relacionamento é importante para determinar características que serão transmitidas de um elemento para o outro (hereditariedade), entre outras coisas
 
+-- DOM (Document Object Model) --
+
+* O DOM é uma interface de programação para os documentos HTML e XML. Representa a página de forma que os programas possam alterar a estrutura do documento, o estilo e o conteúdo.
+Ele é construído utilizando várias APIs que trabalham juntas. O DOM principal define os objetos que descrevem fundamentalmente um documentos e os objetos dentro dele.
+* O DOM não é uma linguagem de programação, mas sem ela, a linguagem javascript não teria nenhum modelo ou noção de páginas da web, documentos HTML, documentos XML e suas partes componentes. 
+* Cada elemento de um documento (cabeçalho, documento como um todo, tabelas, texto) faz parte do modelo de objeto do documento desse documento, para que todos possam ser acessados utilizando o método DOM e uma linguagem de script como JS.
+* O DOM foi projetado para ser independente de qualquer linguagem de programação específica, disponobilizando a representação estrutural do documento a parte de uma única API consistente.
+
 -- Estrutura --
 
 	<!DOCTYPE html> - Diz ao navegador qual versão do html deve ser usada para renderizar ao documento (no caso, html5)
