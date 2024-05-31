@@ -9,7 +9,9 @@
 ---- Variáveis e Operadores ----
 
 -- Variáveis: --
-	var, let, const - Variáveis
+	var - Escopo no body
+	let - Escopo local
+	Const - Constante
 	(let nameVar = value) == (let nameVar; nameVar = value)
 	
 -- Operadores: --
