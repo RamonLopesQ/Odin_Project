@@ -153,4 +153,180 @@ default: code;
 function name(param1,param2){ code }
 name(arg1,arg2) // Chamada da função
 
+---- Arrays e Loops ----
+
+--- Arrays ---
+
+* Tipo de objeto especial que pode armazenar diversos valores dentro de uma variável, aos quais são referidos através de números indexados
+
+const array_name = [item1, item2, item3]
+
+index 1 = array_name[0]
+
+* Dentro de arrays é possível armazenar diversos tipos de tipos, incluindo objetos
+
+-- Métodos --
+
+- Arrays: -
+
+array.length - Retorna o tamanho da array
+array.toString() - Converte a array em strings separadas por vírgula
+array.at(index) - Retorna o valor no index
+array[array.length-1] - Retorna o último valor da array
+array.join(separator) - Junta todos os elementos arrays em uma string separada pelo "separator" (se utilizar "", as letras ficarão juntas)
+array.pop() - Remove o último elemento de uma array e retorna o mesmo
+array.push() - Adiciona um novo elemento no fim da array
+array.shift() - Remove o primeiro elemento e troca todos os outros para uma index mais baixa
+array.unshift() - Adiciona um novo primeiro elemento e troca todos os outros para uma index mais alta
+array[array.length] - Adiciona um novo valor no final sem mover os outros elementos
+array1.concat(array2,array3) - Concatena (une) duas ou mais arrays em uma nova (tambem aceita string como argumento)
+array.copyWithin(index,ini,fim) - Copia todos os elementos do "ini" até o "fim" no index indicado (sobescreve os já existentes naquela posição)
+array.flat() - Cria uma nova array, a partir de sub-arrays concatenadas em uma camada especificada
+array.splice(position, howManyRemoved, newElements) - Adiciona novos items dentro da array 
+array.toSplice(position, howManyRemoved) - Cria uma nova array, copia os elementos da velha array removendo os elementos na posição indicada, mas mantêm a array original intacta
+array.slice(index) - Cria uma nova array e copia todos os elementos a partir da index
+
+- Array Search: -
+
+array.indexOf(value,start) - Procura o elemento dentro da array e retorna seu index
+array.lastIndexOf(value) - Retorna a última ocorrência do elemento especificado
+array.includes(value) - Retorna se a array tem o valor ou não
+array.find(function) - Retorna o valor do primeiro elemento array que passa pela função teste
+	* function myFunction (value, index, array){}
+array.findIndex(function) - Retorna o index do primeiro elemento array que passa pela função teste
+	* function myFunction (value, index, array){}
+array.findLast(function) - Retorna o valor do último elemento array que passa pela função teste
+	* function myFunction (value, index, array){}
+array.findLastIndex(function) - Retorna o index do último elemento array que passa pela função teste
+	* function myFunction (value, index, array){}
+	
+- Array Sort: -
+	
+array.sort() - Organiza de maneira alfabética
+array.reverse() - Inverte a ordem dos elementos de uma array
+array.sort().reverse() - Organiza de maneira alfabética decrescente (z-a)
+array.toSorted() - Organiza de maneira alfabética criando uma nova array, sem alterar a original
+array.toReversed() - Inverte a ordem dos elementos de uma array dentro de uma nova array
+array.sort(function(a,b){return a-b}) - Organiza os elementos em uma ordem númerica crescente
+array.sort(function(a,b){return b-a}) - Organiza os elementos em uma ordem númerica decrescente
+array.sort(function(){return 0.5 - Math.random()}) - Organiza de maneira aleatória
+	* Método mais preciso de ALEATÓRIO: Fisher Yates:
+	const points = [40, 100, 1, 5, 25, 10];
+
+	for (let i = points.length -1; i > 0; i--) {
+	  let j = Math.floor(Math.random() * (i+1));
+	  let k = points[i];
+	  points[i] = points[j];
+	  points[j] = k;
+	}
+	
+* Função que retorna o valor mínimo de uma array:	
+function myArrayMin(arr) {
+  return Math.min.apply(null, arr);
+}
+
+* Função que retorna o valor máximo de uma array:
+function myArrayMax(arr) {
+  return Math.max.apply(null, arr);
+}
+
+- Array Iteration: - 
+
+array.forEach(myFunction) - Chama uma função uma vez para cada elemento do array
+	* function myFunction(value,index,array){}
+array.map(myFunction) - Cria uma nova array performando uma função em cada um dos elementos (não altera a array original e não executa a função para elementos sem valor)
+	* function myFunction(value,index,array){}
+array.flatMap((x) => whatFunctionDo) - Mapeia todos os elementos de uma array e então cria uma nova array achatando todos os elementos
+array.filter(myFunction) - Cria uma nova array apenas com os elementos que passarem no teste
+	* function myFunction(value,index,array){}
+array.reduce(myFunction) - Passa uma função em cada um dos elementos de uma array para reduzí-la a um só valor em uma nova array
+	* function myFunction(total,value,index,array){}
+array.reduceRight(myFunction) - Passa uma função em cada um dos elementos de uma array para reduzí-la a um só valor em uma nova array (da direita pra esquerda)
+	* function myFunction(total,value,index,array){}
+array.every(myFunction) - Checa se todos os valores da array passam no teste
+	* function myFunction(value,index,array){}
+array.some(myFunction) - Checa se alguns elementos da array passam no teste
+	* function myFunction(value,index,array){}
+array.from(object) - Retorna uma array objeto de qualquer objeto com a propriedade length
+array.keys() - Retorna uma array objeto de iteradores com os valores chave de uma array
+	* for (let x of keys) {
+  		text += x + "<br>";
+	}
+arrays.entries() - Retorna uma array objeto de iteradores com os valores chave e o elemento de uma array
+	for (let x of f) {
+  		document.getElementById("demo").innerHTML += x;
+	}
+array.with(index,value) - Modifica os elementos da array sem alterar a array original
+* Operador spread (...) - O operador ... expande um iterável em mais elementos
+	* Ex: const q1 = ["Jan", "Feb", "Mar"];
+	const q2 = ["Apr", "May", "Jun"];
+	const q3 = ["Jul", "Aug", "Sep"];
+	const q4 = ["Oct", "Nov", "May"];
+	const year = [...q1, ...q2, ...q3, ...q4];
+	
+--- Loops ---
+
+* Loops são utilizados para repetição de tarefas. Cada vez que o loop é acionado, o código será um pouco diferente, ou o mesmo código, porêm com variáveis diferentes
+
+	Tipos de Loop:
+
+* Loop for:
+for (initializer; condition; final-expression){ code here }
+	Ex: cats = [A,B,C]; for (let i=0;i < cats.length; i++){ console.log(cats[i]); }
+
+* Loop for...of - Muito utilizado em coleções (como arrays, set, map)
+for (variable of iterable){ code here }
+	Ex: cats = [A,B,C]; for (const cat of cats){ console.log(cat); }
+	
+* Loop do...while:
+initializer do { code... final-expression } while (condition)
+	Ex: cats = [A,B,C]; let i = 0; let myFavCats = "My cats are called ";
+	do { if (i === cats.length-1){ myFavCats += `and ${cats[i]}.`;} else { myFavCats += `and ${cats[i]}.`; i++ } 
+	while (i < cats.length)
+	
+* Loop while:
+initializer while (condition){ code... final-expression }
+	Ex: cats = [A,B,C]; let i = 0; let myFavCats = "My cats are called ";
+	while (i < cats.length){ if (i === cats.length-1){ myFavCats += `and ${cats[i]}.`;} else { myFavCats += `and ${cats[i]}.`; i++ }
+	
+	Declarações importantes:
+
+* break - Utilizado para sair de loops
+for (initializer; condition; final-expression){ what-to-do; if (conditiion) { break };
+
+* continue -  Utilizado para pular para a próxima iteração caso a condição seja verdadeira
+for (initializer; condition; final-expression){ what-to-do; if (conditiion) { continue };
+
+--- TDD --- 
+
+Test Driven Development (TDD) se refere a prática de escrever testes automatizados que descrevem como o código deve funcionar antes de escrever o código. O test() irá falhar antes de escrever o código, e é possível saber que o teste está correto quando terminar o código e o resultado for exibido.
+
+No JS, existem alguma maneiras de fazer isso, entre elas:
+* Criar um arquivo nomeArquivo.spec.js (que irá ser usado para teste) e um arquivo nomeArquivo.js (com o código normal)
+* Dentro do arquivo .spec.js, irá conter o código conforme o exemplo:
+
+Ex:
+const helloWorld = require('./helloWorld');
+describe('Hello World', function() {
+  test('says "Hello, World!"', function() {
+    expect(helloWorld()).toEqual('Hello, World!');
+  });
+});
+
+** Na primeira linha, o require() irá importa o código do arquivo js para ser testado
+** Na segunda linha, o describe() será como o corpo do teste. Basicamente, tudo que está fazendo é rodar o código e testando para ver se a saída está correta.
+** Na terceira linha, a função test() descreve o que deverá acontecer em inglês pleno (ou outro idioma), e inclui a função expect(), que irá analisar se a saída do teste é igual a saída esperada.
+
+* No arquivo .js, será necessário utilizar o comando module.exports, que irá exportar o que for indicado para ser importado e usado por outros arquivos, conforme o exemplo:
+
+Ex:
+const helloWorld = function() {
+  return 'Hello, World!'
+}
+
+module.exports = helloWorld
+
+** Na primeira linha, foi criada a variável que irá conter a função que retornará a string 'Hello, World!'.
+* Na última linha, o module.exports irá exportar apenas a variável helloWorld, que irá ser importada no arquivo .spec.js
+
 
