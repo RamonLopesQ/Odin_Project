@@ -2,6 +2,7 @@
 
 * Adicionar dentro do código: <body> <script> JS code </script> </body>
 * Adicionar de arquivo externo: <body><script src="algo.js"></script></body>
+** Adicionar o script no head: <head><script src="algo.js" defer></head> // o defer faz o arquivo ser lido depois do HTML ser analisado, útil para quando usar manipulação DOM
 * console.log() - Exibe o valor da operação JS na tela de console
 
 * Linguagem Dinamicamente Tipada: Existem tipos de dados, mas as variáveis não são presas a eles, ou seja, uma variável pode armazenar uma string, logo em seguida, ser substituída ou armazenar um number, etc.
@@ -316,6 +317,7 @@ describe('Hello World', function() {
 ** Na primeira linha, o require() irá importa o código do arquivo js para ser testado
 ** Na segunda linha, o describe() será como o corpo do teste. Basicamente, tudo que está fazendo é rodar o código e testando para ver se a saída está correta.
 ** Na terceira linha, a função test() descreve o que deverá acontecer em inglês pleno (ou outro idioma), e inclui a função expect(), que irá analisar se a saída do teste é igual a saída esperada.
+*** É possível adicionar no test() a função skip, para ele pular aquele teste (test.skip())
 
 * No arquivo .js, será necessário utilizar o comando module.exports, que irá exportar o que for indicado para ser importado e usado por outros arquivos, conforme o exemplo:
 
