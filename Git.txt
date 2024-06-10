@@ -44,3 +44,17 @@ Básico do Git:
 	git add .: Adiciona todos os arquivos no diretório atual e todos os subsequentes para a staging area
 	git push: Faz o upload dos arquivos no repositorio github selecionado
 	
+-- Git Branching --
+	
+* Branches no Git permitem que os repositórios no git guardem múltiplas versões dos seus arquivos ao mesmo tempo
+
+	git branch - Exibe todos os galhos disponíveis
+	git branch <branch_name> - Cria um novo galho no git
+	git branch -d <branch_name> - Deleta um galho ja fundido
+	git branch -D <branch_name> - Deleta um galho que ainda não foi fundido
+	git push origin --delete <branch_name> - Deleta o galho do repositório remoto no github
+	git checkout <branch_name> - Muda para o galho selecionado
+		git checkout main - Volta pro main branch
+	git checkout -b <branch_name> - Cria e muda para o novo galho
+	git merge <branch_name> - Funde o galho desejado com o galho ao qual se encontra atualmente
+	
