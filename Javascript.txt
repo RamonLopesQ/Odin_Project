@@ -331,4 +331,55 @@ module.exports = helloWorld
 ** Na primeira linha, foi criada a variável que irá conter a função que retornará a string 'Hello, World!'.
 * Na última linha, o module.exports irá exportar apenas a variável helloWorld, que irá ser importada no arquivo .spec.js
 
+---- Objetos ----
+
+* Além de serem uma maneira de armazenar dados, arrays também tem um set de funções para manipular esses dados.
+
+-- Map(function) --
+
+* Map() é uma função, que espera um callback como argumento (passar uma função como argumento de outra função).
+* O map() tem a função de iteragir o argumento por cada um dos membros automaticamente, sem a necessidade de utilizar o loop for, ou algo similar. Ele retorna uma nova array e não muda a original.
+
+Ex: const arr = [1,2,3,4,5];
+function addOne(num) {
+	return num + 1
+}
+
+const mappedArr = arr.map(addOne);
+console.log(mappedArr);
+
+ou
+
+const mappedArr = arr.map((num) => num + 1);
+console.log(mappedArr)
+
+-- Filter(function) --
+
+* O método filter() é similar ao map. Ele irá iteragir por toda a array e aplicar a função callback em todos os items. No entanto, ao invés de transformar os valores na array, ele irá retornar apenas os valores aos quais a função callback retornar true.
+
+Ex: function isOdd(num){
+	return num % 2 !== 0;
+}
+const arr = [1,2,3,4,5];
+const oddNums = arr.filter(isOdd);
+console.log(oddNums);
+
+ou
+
+const oddNums = arr.filter((num) => num % 2 !== 0)
+console.log(oddNums);
+
+-- Reduce(function) --
+
+* O método reduce() tem o objetivo de pegar os valores no objetivo, e reduzi-los a um número. Ele também receber uma função callback como argumento, mas essa função recebe dois parâmetros. O primeiro argumento é o acumulador, que irá receber o valor atual naquele ponto do loop e adicioná-lo ao total. O segundo argumento é o que irá receber o valor atual.
+
+* arr.reduce(function, initialValue);
+
+Ex: const arr = [1,2,3,4,5];
+const productOfAllNums = arr.reduce((total, currentItem) => {
+	return total * currentItem;
+}, 1);
+console.log(productOfAllNums);
+console.log(arr);
+
 

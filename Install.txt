@@ -23,5 +23,6 @@ Node - nvm install --lts
 	
 	Instalar o Jest - npm install --save-dev jest
 		* Dentro do package.json: Mudar "scripts": {"test": "jest"}
-		
+	
+	Executar o jest para testes: npm test nameArchive	
 	
